@@ -17,13 +17,13 @@ module tt_um_pwm_signal_generator (
 );
 
 	pwm_signal_generator U0(
-	    .clk(ui_in[0])
-	    .rst(ui_in[1])
-	    .ena(ui_in[2])
-	    .xu(ui_in[3])
-	    .xd(ui_in[4])
-	    .Conf(ui_in[7:5])
-            .pwm(uo_out[0])
+		.clk(ui_in[0]),
+		.rst(ui_in[1]),
+		.ena(ui_in[2]),
+		.xu(ui_in[3]),
+		.xd(ui_in[4]),
+		.Conf(ui_in[7:5]),
+                .pwm(uo_out[0])
 	);
 	
 
