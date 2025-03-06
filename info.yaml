@@ -17,21 +17,21 @@ project:
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
-    -"tt_um_pwm_signal_generator.v"
-    -"adder_Nbits.v"
-    -"comp_equ_Nbits.v"
-    -"comp_lth_Nbits.v"
-    -"crtl_pwm.v"
-    -"decod_conf.v"
-    -"ff_d.v"
-    -"ff_d_Nbits.v"
-    -"ff_d_pwm.v"
-    -"ff_t.v"
-    -"fsm_ctrl.v"
-    -"mux_ctrl.v"
-    -"mux_prescaler.v"
-    -"prescaler_32.v"
-    -"pwm_generator_x100.v"
+    - "tt_um_pwm_signal_generator.v"
+    - "adder_Nbits.v"
+    - "comp_equ_Nbits.v"
+    - "comp_lth_Nbits.v"
+    - "crtl_pwm.v"
+    - "decod_conf.v"
+    - "ff_d.v"
+    - "ff_d_Nbits.v"
+    - "ff_d_pwm.v"
+    - "ff_t.v"
+    - "fsm_ctrl.v"
+    - "mux_ctrl.v"
+    - "mux_prescaler.v"
+    - "prescaler_32.v"
+    - "pwm_generator_x100.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
