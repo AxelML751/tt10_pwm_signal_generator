@@ -21,7 +21,7 @@ project:
     - "adder_Nbits.v"
     - "comp_equ_Nbits.v"
     - "comp_lth_Nbits.v"
-    - "crtl_pwm.v"
+    - "ctrl_pwm.v"
     - "decod_conf.v"
     - "ff_d.v"
     - "ff_d_Nbits.v"
