@@ -29,7 +29,7 @@
 //
 
 
-module tt_um_pwm_signal_generator(	
+module tt_pwm_signal_generator(	
 	input rst, clk, ena,
 			xu, xd,
 	input [2:0] Conf,
