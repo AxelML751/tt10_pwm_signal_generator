@@ -5,7 +5,7 @@ project:
   discord:      "carlosj360"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "This digital device allows the generation of a Pulse Width Modulation Signal with a configurable duty cycle and signal frequency."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     4000      # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     4000000     # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
