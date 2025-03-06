@@ -29,9 +29,9 @@ module tt_um_pwm_signal_generator (
 
 
   // All output pins must be assigned. If not used, assign to 0.
-	assign uo_out [7:1] = 7'0000000;  // Example: ou_out is the sum of ui_in and uio_in
-	assign uio_out [7:0] = 8'00000000;
-	assign uio_oe [7:0] = 8'00000000;
+	assign uo_out [7:1] = 7'b0000000;  // Example: ou_out is the sum of ui_in and uio_in
+	assign uio_out [7:0] = 8'b00000000;
+	assign uio_oe [7:0] = 8'b00000000;
 
   // List all unused inputs to prevent warnings
 	wire _unused = &{ena, clk, rst_n, uio_in[7:0]};
