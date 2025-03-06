@@ -19,13 +19,18 @@ The modules of this device communicate via control and data signals. The prescal
  ![image](https://github.com/user-attachments/assets/67ead29d-4d5e-4041-8b4a-6fafde08c48e)
 
 The prescaler is an important module in the system (see Fig. 3), as it reduces the main clock frequency to generate a lower-frequency clock, allowing the PWM signal frequency to be adjusted. This module uses D-type and T-type flip-flops to synchronize and control the output signal. Additionally, it includes a multiplexer that selects the desired frequency based on the configuration through the 3-bit Conf input, allowing the base clock frequency to be reduced by up to a factor of 1:32, as shown in Table 2.
+
 ![image](https://github.com/user-attachments/assets/e5aeb19d-179b-4f2b-8762-87f8539aa1f6)
 
 The Prescaler module employs a decoder to enable the different clock dividers, allowing their activation only when used. This decoder architecture is shown in Fig. 4.
+
 ![image](https://github.com/user-attachments/assets/d841a34c-8e37-4206-800a-3d077871768c)
 ![image](https://github.com/user-attachments/assets/f2760ded-4735-4a4e-8bc5-1e839ab29ee9)
+
 The duty cycle adjustment module (see Fig. 5) is responsible for adjusting the duty cycle of the PWM signal based on the "xu" (increment) and "xd" (decrement) inputs. This module uses a finite state machine (FSM) to manage the transitions between different duty cycle values, allowing the duty cycle to be increased or decreased in steps of 10%. Additionally, it includes an adder that calculates the new duty cycle values and a multiplexer that selects the value to be incremented: 0 (no change), 10 (increment), or -10 (decrement), ensuring that the value stays within the allowed range of 0% to 100%. The FSM is of the Moore type and is summarized in the graph shown in Fig. 6. This module sends the final configured duty cycle value (Npwm) to the PWM generator, producing the modulated signal.
+
 ![image](https://github.com/user-attachments/assets/ac321989-4952-4756-8ccc-f6402373fbdc)
+
 The transitions between these states are determined by control signals: xu, xd, cd, and cu. On this way, cd, and cu represents the following equality operations:
 • 𝑐𝑢←(𝑌==100)
 • 𝑐𝑑←(𝑌==0)
@@ -33,7 +38,9 @@ The outputs A, B, and C of the FSM represent:
 • 𝐴:𝑆𝑒𝑙=00 (No change)
 • 𝐵:𝑆𝑒𝑙=01 (Increment)
 • 𝐶:𝑆𝑒𝑙=10 (Decrement)
+
 ![image](https://github.com/user-attachments/assets/21ee46fa-d677-4791-a783-95b63a52e163)
+
 This module generates a PWM signal with a specified duty cycle. It uses an internal counter that increments its value on each clock cycle. The counter's value is compared to the specified duty cycle (Npwm) to determine the pulse width modulation. If the counter's value is less than Npwm, the PWM signal will output a high signal; otherwise, it will output a low signal. Additionally, the PWM generator includes a comparator that resets the counter when it reaches its maximum value of 99, ensuring that the PWM signal maintains an accurate duty cycle between 0% and 100%, with a resolution of 1%. Its architecture is depicted on Fig. 7.
 
 ## How to test
