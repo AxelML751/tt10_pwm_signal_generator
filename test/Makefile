@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = tt_um_pwm_signal_generator.v pwm_signal_generator.v  adder_Nbits.v comp_equ_Nbits.v comp_lth_Nbits.v ctrl_pwm. v decod_conf.v ff_d.v ff_d_Nbits.v ff_d_pwm.v ff_t.v fsm_ctrl.v mux_ctrl.v mux_prescaler.v prescaler_32.v pwm_generator_x100.v
+PROJECT_SOURCES = tt_um_pwm_signal_generator.v pwm_signal_generator.v  adder_Nbits.v comp_equ_Nbits.v comp_lth_Nbits.v ctrl_pwm.v decod_conf.v ff_d.v ff_d_Nbits.v ff_d_pwm.v ff_t.v fsm_ctrl.v mux_ctrl.v mux_prescaler.v prescaler_32.v pwm_generator_x100.v
 
 ifneq ($(GATES),yes)
 
