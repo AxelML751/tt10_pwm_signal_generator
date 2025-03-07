@@ -21,7 +21,7 @@ The pinout description is presented in Table 1.
 
 Table 1. Pinout description.
 
-![image](https://github.com/user-attachments/assets/8994c51a-83b2-46ae-9c2f-e733080f3ab9)
+![image](https://github.com/user-attachments/assets/69108114-bd06-4ca4-b10a-eae84fffdcbf)
 
 Three modules were designed to construct the PWM signal generator device: the prescaler, duty cycle adjustment, and PWM generator. Fig. 2 depicts the block diagram of the device.
 
@@ -86,7 +86,7 @@ Its operation is described below.
 
 Table 2.PWM signal frequency configurations. [Note: base on clock input of 4 MHz]
 
-![image](https://github.com/user-attachments/assets/17f21540-eabd-4ffe-9823-1223e081a644)
+![image](https://github.com/user-attachments/assets/7eb4912c-1326-4ddc-92dd-d2b6e3053884)
 
    • Activate the module setting the enable to 1.
 
